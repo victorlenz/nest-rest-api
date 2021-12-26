@@ -2,10 +2,12 @@ import { IsAlphanumeric, IsEmail, IsNotEmpty, MinLength } from 'class-validator'
 
 export class CreateUserDto {
 
+  
   @IsAlphanumeric()
   @IsNotEmpty()
   name: string
 
+  @IsNotEmpty()
   @IsEmail()
   email: string;
 
